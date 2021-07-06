@@ -9,6 +9,7 @@
 
    <xsl:template name="css-script">
       <xsl:param name="parm-css-loc" tunnel="yes" required="no"></xsl:param>
+      <xsl:param name="parm-leiden-style" tunnel="yes" required="no"></xsl:param>
 
       <link rel="stylesheet" type="text/css">
          <xsl:attribute name="href">

@@ -79,6 +79,7 @@
          </head>
 
          <body>
+
             <h1>
               <xsl:value-of select="//t:teiHeader//t:title"/>
             </h1>

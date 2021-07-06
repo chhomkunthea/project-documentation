@@ -28,7 +28,7 @@
                 <xsl:element name="div">
                   <xsl:attribute name="class">translated-stanzanumber</xsl:attribute>
                 <xsl:number value="substring-before(@n, ',')" format="I"/>
-                <xsl:text>, </xsl:text>
+                <xsl:text>, </xsl:text>
                 <xsl:number value="substring-after(@n, ',')" format="I"/>
                 <xsl:text>. </xsl:text>
                 </xsl:element>
@@ -37,12 +37,12 @@
                 <xsl:element name="div">
                   <xsl:attribute name="class">translated-stanzanumber</xsl:attribute>
                 <xsl:number value="substring-before(@n, '-')" format="I"/>
-                <xsl:text>, </xsl:text>
+                <xsl:text>, </xsl:text>
                 <xsl:number value="substring-after(@n, '-')" format="I"/>
                 <xsl:text>. </xsl:text>
                 </xsl:element>
               </xsl:when>
-           
+
               <xsl:otherwise>
                 <xsl:element name="div">
                   <xsl:attribute name="class">translated-stanzanumber</xsl:attribute>

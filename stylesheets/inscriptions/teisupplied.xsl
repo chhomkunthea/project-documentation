@@ -32,6 +32,7 @@
                  <xsl:text>]</xsl:text>
             </xsl:if>
          </xsl:when>
+         <xsl:when test="$parm-leiden-style = 'dharma' and parent::t:fw"/>
 
          <xsl:otherwise>
         <!--
@@ -182,7 +183,7 @@
   </xsl:template>
 
 
-  <xsl:template match="t:supplied[@reason='explanation']">
+  <xsl:template match="t:supplied[@reason='explanation']" mode="#all">
       <xsl:text>(</xsl:text>
       <xsl:apply-templates/>
       <xsl:call-template name="cert-low"/>

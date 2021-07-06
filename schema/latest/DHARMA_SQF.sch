@@ -90,7 +90,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern>
+    <!--<sch:pattern>
         <sch:rule context="t:app">
             <sch:assert test="./@loc" sqf:fix="add-loc">@loc is mandatory on the app element</sch:assert>
             <sqf:fix id="add-loc">
@@ -100,7 +100,7 @@
                 <sqf:add node-type="attribute" target="loc"/>
             </sqf:fix>
         </sch:rule>
-    </sch:pattern>
+    </sch:pattern>-->
     <sch:pattern>
         <sch:rule context="t:div[@type='edition']//t:l">
             <sch:assert test="./@n">Line verses should be numered with @n attribute</sch:assert>
@@ -119,7 +119,7 @@
     <sch:pattern>
         <sch:rule context="/">
             <sch:let name="fileName" value="tokenize(document-uri(/), '/')[last()]"/>
-            <sch:assert test="starts-with($fileName, 'DHARMA_INS')">The filename should start with DHARMA_INS, and is currently "<sch:value-of select="$fileName"/>"</sch:assert>
+            <sch:assert test="starts-with($fileName, 'DHARMA_INS') or starts-with($fileName, 'DHARMA_DiplEd')">The filename should start with DHARMA_INS or DHARMA_DiplEd, and is currently "<sch:value-of select="$fileName"/>"</sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -153,6 +153,13 @@
         <sch:rule context="t:*/@source[starts-with(., 'bib:')] |t:*/@target[starts-with(., 'bib:')]">
             <sch:let name="biblEntries" value="for $w in tokenize(replace(., '\+', '%2B'), '\s+') return substring-after($w,'bib:')"/>
             <sch:assert test="every $biblEntry in $biblEntries satisfies 1 eq count(document(replace(concat('https://api.zotero.org/groups/1633743/items?tag=', $biblEntry, '&amp;format=tei'), 'amp;', ''))//t:biblStruct)">The Short Title seems to match several entities in Zotero Library</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <!-- Adding codes to check the content of the attribute @rendition - juillet 2021 -->
+    <sch:pattern>
+        <sch:rule context="t:*/@rendition">
+            <sch:assert test="contains(.,'class:') and contains(.,'maturity:')">The content of the attribute @corresp should contained ids for both script classification and script maturity, respectively represented by the following prefixes "class:" and "maturity:".</sch:assert>
         </sch:rule>
     </sch:pattern>
     

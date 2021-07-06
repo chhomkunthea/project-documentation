@@ -45,6 +45,9 @@
 			</abstract>
 		</profileDesc>
 		<revisionDesc status="draft">
+			<change who="#argr" when="2021-06-01">Added Amandine Wattelier-Bricout's ID.</change>
+			<change who="#argr" when="2021-05-20">Added Wayan Jarrah Sastrawan's ID.</change>
+			<change who="#argr" when="2021-03-01">Added Roberta Zollo's ID.</change>
 			<change who="#argr" when="2020-08-27">Added Salomé Pichon's ID.</change>
 			<change who="#axja" when="2019-12-12">Updates on the metadata schema and applying Arlo
 				Griffiths's suggestions on the IDs.</change>
@@ -65,7 +68,7 @@
 						<surname>Francis</surname>
 					</persName>
 					<idno type="VIAF">http://viaf.org/viaf/156480842</idno>
-					<idno type="IdHAL">https://cv.archives-ouvertes.fr/emmanuel-francis</idno>
+					<idno type="IdHAL">emmanuel-francis</idno>
 					<idno type="IdRef">https://www.idref.fr/127901175</idno>
 					<idno type="ORCID">https://orcid.org/0000-0001-5405-2269</idno>
 				</person>
@@ -75,7 +78,7 @@
 						<surname>Griffiths</surname>
 					</persName>
 					<idno type="VIAF">http://viaf.org/viaf/11026260</idno>
-					<idno type="idHAL">https://cv.archives-ouvertes.fr/arlo-griffiths</idno>
+					<idno type="idHAL">arlo-griffiths</idno>
 					<idno type="IdRef">https://www.idref.fr/087383462</idno>
 					<idno type="ORCID"/>
 					<!-- to be created -->
@@ -121,6 +124,7 @@
 					<idno type="IdRef">https://www.idref.fr/150577419</idno>
 					<idno type="wikidata">https://www.wikidata.org/wiki/Q50221197</idno>
 					<idno type="ORCID">https://orcid.org/0000-0001-9633-829X</idno>
+					<idno type="IdHAL">andrea-acri</idno>
 				</person>
 				<person xml:id="adgu">
 					<persName>
@@ -130,6 +134,7 @@
 					<!-- http://viaf.org/viaf/283969266 -->
 					<!-- EF dixit: So he has 2 VIAF -->
 					<idno type="IdRef">https://www.idref.fr/147009324</idno>
+					<idno type="IdHAL">aditia-gunawan</idno>
 				</person>
 				<person xml:id="agin">
 					<!-- Can't we remove this person? -->
@@ -188,9 +193,9 @@
 					<idno type="VIAF">http://viaf.org/viaf/159939465</idno>
 					<idno type="IdRef">https://www.idref.fr/100933807</idno>
 				</person>
-				<person xml:id="gubu">
+				<person xml:id="gibu">
 					<persName>
-						<forename>Guilia</forename>
+						<forename>Giulia</forename>
 						<surname>Buriola</surname>
 					</persName>
 				</person>
@@ -322,6 +327,7 @@
 						<surname>Janiak</surname>
 					</persName>
 					<idno type="ORCID">https://orcid.org/0000-0001-6984-7363</idno>
+					<idno type="IdHAL">axelle-janiak</idno>
 				</person>
 				<person xml:id="cski">
 					<persName>
@@ -353,6 +359,10 @@
 						<forename>Coline</forename>
 						<surname>Lefrancq</surname>
 					</persName>
+					<idno type="VIAF">http://viaf.org/viaf/72161511995670560688</idno>
+					<idno type="IdRef">https://www.idref.fr/253581214</idno>
+					<idno type="IdHAL">coline-lefrancq</idno>
+					<idno type="ORCID">https://orcid.org/0000-0001-8609-6119</idno>
 					<!-- nothing found -->
 					<!-- Manu: you may help Coline get a VIAF, idHAL, ORCID... -->
 					<!-- Manu dixit: will do for idHAL and ORCID -->
@@ -364,7 +374,7 @@
 					</persName>
 					<idno type="VIAF">http://viaf.org/viaf/131146574008638102599</idno>
 					<idno type="IdRef">https://www.idref.fr/193202719</idno>
-					<!-- add the IdHal -->
+					<idno type="IdHAL">adeline-levivier</idno>
 				</person>
 				<person xml:id="pili">
 					<persName>
@@ -407,7 +417,7 @@
 						<surname>Morlock</surname>
 					</persName>
 					<idno type="VIAF">http://viaf.org/viaf/316672978</idno>
-					<idno type="IdHAL">https://cv.archives-ouvertes.fr/emmanuelle-morlock</idno>
+					<idno type="IdHAL">emmanuelle-morlock</idno>
 					<idno type="IdRef">https://www.idref.fr/185971202</idno>
 					<idno type="ORCID">https://orcid.org/0000-0002-1617-8554</idno>
 				</person>
@@ -471,6 +481,15 @@
 					<idno type="VIAF">http://viaf.org/viaf/34006731</idno>
 					<idno type="IdRef">https://www.idref.fr/079236472</idno>
 				</person>
+				<person xml:id="wjsa">
+					<persName>
+						<forename>Wayan Jarrah</forename>
+						<surname>Sastrawan</surname>
+					</persName>
+					<!--<idno type="ORCID">...</idno>
+					<idno type="VIAF">...</idno>
+					<idno type="IdRef">...</idno>-->
+				</person>
 				<person xml:id="sath">
 					<persName>
 						<name>R. Sathyanarayanan</name>
@@ -524,6 +543,7 @@
 					<idno type="VIAF">http://viaf.org/viaf/308304168</idno>
 					<idno type="IdRef">https://www.idref.fr/177429623</idno>
 					<idno type="ORCID">https://orcid.org/0000-0002-3028-7116</idno>
+					<idno type="IdHAL">vincent-tournier</idno>
 				</person>
 				<person xml:id="utve">
 					<persName>
@@ -540,6 +560,20 @@
 					<idno type="VIAF">http://viaf.org/viaf/30722592</idno>
 					<idno type="IdRef">https://www.idref.fr/106412329</idno>
 					<idno type="ORCID">https://orcid.org/0000-0001-6061-0140</idno>
+				</person>
+				<person xml:id="amwb">
+					<persName>
+						<forename>Amandine</forename>
+						<surname>Wattelier-Bricout</surname>
+					</persName>
+					<idno type="IdHAL">amandine-wattelier-bricout</idno>
+				</person>
+				<person xml:id="rozo">
+					<persName>
+						<forename>Roberta</forename>
+						<surname>Zollo</surname>
+					</persName>
+					<idno type="ORCID">https://orcid.org/0000-0002-1014-4660</idno>
 				</person>
 			</listPerson>
 		</body>

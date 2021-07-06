@@ -35,11 +35,13 @@
     border-bottom:1px solid #040404;
     height:1rem;
 }
-body {
+body{
     background-color:#eeeeee;
     font-family:"Noto Serif";
     height:100%;
     width: 75%;
+    position: absolute;
+    display: grid;
 }
 .container {
     /*width:1280px;*/
@@ -61,14 +63,14 @@ body {
 }
 
 /* lines and line groups */
-.lg { display:inline; line-height:1.75rem;}
+/*.lg { display:inline; line-height:1.75rem;}
 .lg .l {  display:block; margin-left:30px; }
 .lg .l+.lg .l:last-child { display:inline-block; }
 .l:last-child, .l:last-of-type { margin-bottom:10px; }
 .lg .l .caesura:after {
   content: "\A\0000a0\0000a0\0000a0\0000a0\0000a0\0000a0" !important;
   white-space:pre;
-}
+}*/
 /* in the analyzed portion*/
 .lg .l .odd_pada:after {
   content: "\A\0000a0\0000a0\0000a0\0000a0\0000a0\0000a0" !important;
@@ -288,11 +290,12 @@ ul.sgt-index {
       These are inline so that following
       <ref> elements can be inline with the
       last line of a verse. */
-.lg {
-  display:inline;
-}
+.lg { display:inline; line-height:1.75rem;}
+.anustubh .l:nth-child(2n+1){ display: inline-block; margin-left:30px; clear: left;}
+.anustubh .l:nth-child(2):after { content:"\A"; white-space:pre; }
+.anustubh .l:nth-child(2n) { display: inline; }
 /* Format individual lines as block elements */
-.lg .l {
+.lg:not(.anustubh) .l {
   display:block;
   margin-left:1rem;
   padding-left:2rem;
@@ -614,8 +617,38 @@ a:hover, a i.fas:hover {
     color: #a34545;
 }
 
-.tooltipApp a {
-    color: #a34545;
+.textContent {
+  display: block;
+  width: 100%;
+}
+
+p{
+    text-align: justify;  
+    clear:both;
+         }
+         
+.tooltipApp a{
+    color: #a34545; 
+      right: -950px;
+   position:relative;
+      font-style: normal;
+}
+/*.tooltipApp a:not(first-child) {
+  display: inline;
+  
+}*/
+.tooltipApp  { 
+ display:inline-block;
+ width: 100%;
+
+}
+.lem-last-note a{
+    color: #a34545; 
+     right: -950px;
+      position:relative;
+}
+.text-muted .siglum {
+    color: grey;
 }
 .title {
     font-style:italic;
@@ -692,4 +725,8 @@ a:hover, a i.fas:hover {
 .list-unstyled li{
    margin-left: 40px;
    padding: 5px;
+}
+
+.parallels{
+     padding: 25px;
 }

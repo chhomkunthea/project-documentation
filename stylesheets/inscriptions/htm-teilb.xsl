@@ -202,6 +202,9 @@ Pb de lb[@break=no] entre deux textpart
                   <!-- always print line-no when broken orig in line, in ddbdp -->
                   <xsl:call-template name="margin-num"/>
                </xsl:when>
+               <xsl:when test="number(@n) and $parm-leiden-style = 'dharma'">
+                 <xsl:call-template name="margin-num"/>
+               </xsl:when>
             </xsl:choose>
          </xsl:otherwise>
       </xsl:choose>
@@ -248,7 +251,7 @@ Pb de lb[@break=no] entre deux textpart
                    (normalize-space(.)=''
                             and preceding-sibling::node()[1][local-name() = 'pb' or local-name() ='fw'])]">
      <xsl:if test="EDF:f-wwrap(.) = true()">
-        <xsl:text>- </xsl:text>
+        <xsl:text>-</xsl:text>
      </xsl:if>
           <xsl:element name="sup">
             <xsl:text>⎘ plate </xsl:text>
@@ -259,16 +262,18 @@ Pb de lb[@break=no] entre deux textpart
                              (normalize-space(.)=''
                                       and preceding-sibling::node()[1][local-name() ='fw'])]">
             <xsl:element name="sup">
-              <xsl:text>[fw: </xsl:text>
+              <xsl:text>fw: </xsl:text>
+              <xsl:if test="preceding-sibling::t:fw[1][child::t:supplied]">[</xsl:if>
               <xsl:value-of select="preceding-sibling::t:fw[1]/child::node()"/>
-              <xsl:text>] </xsl:text>
+              <xsl:if test="preceding-sibling::t:fw[1][child::t:supplied]">]</xsl:if>
+              <xsl:text> </xsl:text>
             </xsl:element>
           </xsl:if>
         </xsl:when>
         </xsl:choose>
    </xsl:template>
 <!-- Display the pb for the blank pages-->
-      <xsl:template match="//t:pb">
+      <xsl:template match="//t:pb[not(preceding::node()/text())]">
         <xsl:param name="parm-leiden-style" tunnel="yes" required="no"></xsl:param>
         <xsl:if test="not(following-sibling::t:lb[1]) or following-sibling::t:gap[1]">
           <xsl:element name="sup">
@@ -278,9 +283,11 @@ Pb de lb[@break=no] entre deux textpart
           </xsl:element>
           <xsl:if test="following-sibling::t:fw[1]">
             <xsl:element name="sup">
-              <xsl:text>[fw: </xsl:text>
+              <xsl:text>fw: </xsl:text>
+              <xsl:if test="following-sibling::t:fw[1][child::t:supplied]">[</xsl:if>
               <xsl:value-of select="following-sibling::t:fw[1]/child::node()"/>
-              <xsl:text>]</xsl:text>
+              <xsl:if test="following-sibling::t:fw[1][child::t:supplied]">]</xsl:if>
+              <xsl:text> </xsl:text>
             </xsl:element>
           </xsl:if>
         </xsl:if>
